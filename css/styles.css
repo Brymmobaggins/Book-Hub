@@ -4,8 +4,8 @@
   font-family: "Playpen Sans", "cursive";
 }
 body {
-  background-color: #f0ffff;
-  color: #000000;
+  background-color: #000000;
+  color: azure;
 }
 header {
   text-align: center;
@@ -16,11 +16,25 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid #ff0000;
+  border: 1px solid#ff0000;
   margin: 0 auto;
 }
 input {
   width: 100%;
   /* padding: 12px 10px; */
   font-size: 18px;
+}
+#result{
+  padding: 4rem;
+}
+#result::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  #result {
+    width: 100%;
+  }
 }
