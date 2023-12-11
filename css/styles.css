@@ -11,27 +11,48 @@ header {
   text-align: center;
   font-weight: 800;
 }
-form {
-  width: 700px;
+
+.search-group {
+  background: yellow;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid#ff0000;
-  margin: 0 auto;
 }
 input {
   width: 100%;
-  /* padding: 12px 10px; */
   font-size: 18px;
 }
-#result{
-  padding: 4rem;
+/* up{
+  text-align: center;
+} */
+#result {
+  /* display: flex; */
+  /* background-color:#ffff00; */
 }
-#result::after {
-  content: "";
-  clear: both;
-  display: table;
+/* loading spinner  animation*/
+#loader {
+  border: 12px solid #f3f3f3; /* Light grey */
+  border-top: 15px solid #000000; /* Blue */
+  border-radius: 55%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  display: none;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #result {

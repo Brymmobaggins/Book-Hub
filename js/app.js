@@ -3,6 +3,7 @@ const button = document.getElementById('search-button')
 
 button.addEventListener("click", searchBooks)
 function searchBooks() {
+
     const API_KEY = "AIzaSyAZuWkNYrGWFvy7EF0bble9NXR3bEHXZRk"
     const searchInput = document.getElementById('search-input').value
 
@@ -19,21 +20,32 @@ function displayResult(data) {
     resultContainer.innerHTML = ""
 
     if (data.items) {
-        data.items.forEach(book => {
+        for (let i = 0; i < data.items.length; i++) {
+            const book = data.items[i];
             const title = book.volumeInfo.title;
-            const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Authors';
-            const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '';
-
+            const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : 'Unknown Authors';
+            const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ' ';
+            const publishedDate = book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : ' '
             const bookDiv = document.createElement('div');
-            bookDiv.innerHTML = `<div style="float:left; width:33.3%"
+            bookDiv.innerHTML = `
                         <h3>${title}</h3>
                         <p>Authors: ${authors}</p>
+                        <p>Date: ${publishedDate}</p>
                         <img src="${thumbnail}" alt="Book Cover">
                         <hr>
-                    </div>`;
+                    `;
             resultContainer.appendChild(bookDiv);
-        });
+        }
     } else {
         resultContainer.innerHTML = '<p>No results found</p>';
     }
+}
+
+
+
+function showLoader() {
+    document.getElementById("loader").style.display = "block"
+}
+function hideLoader() {
+    document.getElementById("loader").style.display = "none"
 }
