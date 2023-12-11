@@ -30,7 +30,7 @@ function displayResult(data) {
             bookDiv.innerHTML = `
                         <h3>${title}</h3>
                         <p>Authors: ${authors}</p>
-                        <p>Date: ${publishedDate}</p>
+                        <p>Date Published: ${publishedDate}</p>
                         <img src="${thumbnail}" alt="Book Cover">
                         <hr>
                     `;
