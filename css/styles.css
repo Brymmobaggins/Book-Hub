@@ -1,36 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap");
 
-* {
-  font-family: "Playpen Sans", "cursive";
+/* variables */
+:root {
+  --primary-color: #00ffff;
+  --secondary-color: #000000;
+  --tertiary-color: #b9e74c;
+  --quaternary-color: #f0ffff;
 }
-body {
-  background-color: #000000;
-  color: azure;
+/* reset */
+body,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
 }
-header {
-  text-align: center;
-  font-weight: 800;
+/* fonts */
+@font-face {
+  font-family: "Playpen Sans", cursive;
+  src: url("Assests/fonts/PlaypenSans-VariableFont_wght.ttf");
 }
 
-.search-group {
-  background: yellow;
+/* base styles */
+body {
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
+  font-family: "Playpen Sans", cursive;
+}
+.book-search {
+  background-color: #dcdcb2;
+  padding: 8px;
   max-width: 400px;
-  width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: right;
 }
 input {
   width: 100%;
-  font-size: 18px;
+  display: block;
+  padding: 0 5px;
+  /* font-weight: bold; */
+  font-size: 16px;
 }
-/* up{
-  text-align: center;
-} */
-#result {
-  /* display: flex; */
-  /* background-color:#ffff00; */
+button {
+  background-color: none;
+  border: 2px solid #3504a778;
+  color: var(--quaternary-color);
+  background-color: #3504a778;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  margin-left: 0.685rem;
+}
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+h4,
+p,
+h1 {
+  /* text-align: center; */
+}
+h3,
+a {
+  color: #8d5959;
 }
 /* loading spinner  animation*/
 #loader {
@@ -53,9 +91,20 @@ input {
   }
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/* mobile styles */
+
+/* small tablets styles */
+@media screen and (min-width: 620px) {
   #result {
-    width: 100%;
+  }
+}
+/* large tablets styles and laptops styles */
+@media screen and (min-width: 960px) {
+  #result {
+  }
+}
+/* Desktops styles */
+@media screen and (min-width: 1200px) {
+  #result {
   }
 }
