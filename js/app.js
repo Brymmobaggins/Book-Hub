@@ -33,7 +33,7 @@ function displayResult(data) {
                         <p><b>Authors:</b> ${authors}</p>
                         <p><b>Date Published:</b> ${publishedDate}</p>
                         <img src="${thumbnail}" alt="Book Cover">
-                        <p><a href="${previewLink}" target="_blank">More info</p>
+                        <a href="${previewLink}" target="_blank">More info</a>
                         <hr>
                     `;
             resultContainer.appendChild(bookDiv);

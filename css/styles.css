@@ -5,7 +5,7 @@
   --primary-color: #00ffff;
   --secondary-color: #000000;
   --tertiary-color: #b9e74c;
-  --quaternary-color: #f0ffff;
+  --quaternary-color: #daefef;
 }
 /* reset */
 body,
@@ -15,7 +15,7 @@ ul,
 li {
   padding: 0;
   margin: 0;
-  text-decoration: none;
+  /* text-decoration: none; */
   list-style-type: none;
 }
 /* fonts */
@@ -43,11 +43,13 @@ input {
   width: 100%;
   display: block;
   padding: 0 5px;
+  outline: 0;
   /* font-weight: bold; */
   font-size: 16px;
 }
 button {
-  background-color: none;
+  font-family: "Playen Sans", cursive;
+  font-weight: 900;
   border: 2px solid #3504a778;
   color: var(--quaternary-color);
   background-color: #3504a778;
@@ -60,15 +62,24 @@ button:hover {
   opacity: 0.9;
   cursor: pointer;
 }
+#result b{
+  color: #e8d5bd;
 
-h4,
-p,
-h1 {
-  /* text-align: center; */
 }
-h3,
-a {
-  color: #8d5959;
+#result p,#result h3{
+  color: #ffff00;
+}
+#result a{
+  display: block;
+  color:#e084c4;
+}
+
+h1,
+footer h4 {
+  text-align: center;
+}
+footer a {
+  color: #abd059;
 }
 /* loading spinner  animation*/
 #loader {
