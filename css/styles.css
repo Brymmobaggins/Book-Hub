@@ -22,6 +22,8 @@ li {
 @font-face {
   font-family: "Playpen Sans", cursive;
   src: url("Assests/fonts/PlaypenSans-VariableFont_wght.ttf");
+  font-family: "Inconsolata", monospace;
+  src: url("Assests/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
 }
 
 /* base styles */
@@ -62,20 +64,34 @@ button:hover {
   opacity: 0.9;
   cursor: pointer;
 }
-#result b{
-  color: #e8d5bd;
-
+#result {
+  font-family: "Inconsolata", monospace;
+  font-weight: 200;
 }
-#result p,#result h3{
+#result b {
+  color: #e8d5bd;
+}
+#result small {
+  text-align: center;
+  display: block;
+  font-size: large;
+  margin-top: 0.5rem;
+}
+#result p,
+#result h3 {
   color: #ffff00;
 }
-#result a{
+#result a {
   display: block;
-  color:#e084c4;
+  color: #ef471c;
+}
+.no-result p{
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-h1,
-footer h4 {
+footer h4,
+h1 {
   text-align: center;
 }
 footer a {
