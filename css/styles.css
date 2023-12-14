@@ -18,6 +18,10 @@ li {
   /* text-decoration: none; */
   list-style-type: none;
 }
+html {
+  font-size: 1em;
+  font-weight: normal;
+}
 /* fonts */
 @font-face {
   font-family: "Playpen Sans", cursive;
@@ -66,28 +70,38 @@ button:hover {
 }
 #result {
   font-family: "Inconsolata", monospace;
-  font-weight: 200;
+  margin: 2em auto;
+  max-width: 1060px;
+  /* background-color: #eee; */
 }
-#result b {
-  color: #e8d5bd;
+.card {
+  border: 1px solid #1e1919;
+  color: #1e1919;
+  padding-left: 2em;
+  background-color: #fcf9f9d6;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  width: 90%;
+
 }
-#result small {
-  text-align: center;
+.card > * {
+  line-height: 20px;
+  padding-top: 8px;
+}
+.card a {
   display: block;
-  font-size: large;
-  margin-top: 0.5rem;
+  color: #008000;
 }
-#result p,
-#result h3 {
-  color: #ffff00;
+.card img {
+  max-width: 100%;
 }
-#result a {
-  display: block;
-  color: #ef471c;
-}
-.no-result p{
-  text-align: center;
-  margin-top: 0.5rem;
+.no-result {
+  /* text-align: center; */
+  /* margin-top: 0.5rem; */
+  background-color: yellow;
+  margin: 0 auto;
+  display: visible;
 }
 
 footer h4,
@@ -121,17 +135,10 @@ footer a {
 /* mobile styles */
 
 /* small tablets styles */
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 600px) {
   #result {
-  }
-}
-/* large tablets styles and laptops styles */
-@media screen and (min-width: 960px) {
-  #result {
-  }
-}
-/* Desktops styles */
-@media screen and (min-width: 1200px) {
-  #result {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5%;
   }
 }

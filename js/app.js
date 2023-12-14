@@ -31,24 +31,28 @@ function displayResult(data) {
             const publishedDate = book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : ' ';
             const previewLink = book.volumeInfo.previewLink || '#'
             const bookDiv = document.createElement('div');
+            bookDiv.setAttribute('class', 'card')
             bookDiv.innerHTML = `
-                    <h3><b>Title:</b> ${title}</h3>
+                    <p><b>Title:</b> ${title}</p>
                     <p><b>Authors:</b> ${authors}</p>
                     <p><b>Date Published:</b> ${publishedDate}</p>
                     <img src="${thumbnail}" alt="Book Cover">
                     <a href="${previewLink}" target="_blank">More info</a>
-                    <hr>`;
+                    `;
             resultContainer.appendChild(bookDiv);
         }
     } else {
         // if there are no results, display a message
-        const noResultDiv = document.createElement('div')
-        noResultDiv.setAttribute('class', 'no-result')
-        noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
-        resultContainer.appendChild(noResultDiv)
+        resultContainer.innerText = "No result found"
+        // const noResultDiv = document.createElement('div')
+        // noResultDiv.setAttribute('class', 'no-result')
+        // noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
+        // resultContainer.appendChild(noResultDiv)
+        // resultContainer.insertBefore(noResultDiv, result)
+
 
         // message vanish in 3 seconds
-        setTimeout(() => { noResultDiv.remove() }, 3000)
+        // setTimeout(() => { noResultDiv.remove() }, 3000)
 
     }
 
