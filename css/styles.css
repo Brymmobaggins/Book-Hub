@@ -3,7 +3,7 @@
 /* variables */
 :root {
   --primary-color: #00ffff;
-  --secondary-color: #000000;
+  --secondary-color: #2F3C7E;
   --tertiary-color: #b9e74c;
   --quaternary-color: #daefef;
 }
@@ -61,8 +61,8 @@ button {
   font-family: "Playen Sans", cursive;
   font-weight: 900;
   border: 2px solid #3504a778;
-  color: var(--quaternary-color);
-  background-color: #3504a778;
+  color: #0e0000;
+  background-color: #FBEAEB;
   padding: 6px 12px;
   border-radius: 4px;
   letter-spacing: 1px;

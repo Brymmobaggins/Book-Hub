@@ -1,4 +1,4 @@
-// const input = document.getElementById('input-value')
+
 const button = document.getElementById('search-button')
 
 // event listener to call the searchBooks function when user submits form
@@ -43,7 +43,6 @@ function displayResult(data) {
         }
     } else {
         // if there are no results, display a message
-        // resultContainer.innerHTML = `<p>No result found</p>`
         const noResultDiv = document.createElement('div')
         noResultDiv.setAttribute('class', 'no-result')
         noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
@@ -56,37 +55,6 @@ function displayResult(data) {
     }
 
 }
-// create event listener to call the searchBooks function when user submits form
-// function to create a new card for each book in the array of books and append it to the page
-// function createBookCard(book) {
-// // create a new div element
-// const bookDiv = document.createElement('div');
-// // set the class of the div to card
-// bookDiv.setAttribute('class', 'card');
-// // create a new h3 element
-// const title = document.createElement('h3');
-// // set the text of the h3 to the book's title
-// title.textContent = book.title;
-// // append the h3 to the div
-// bookDiv.appendChild(title);
-// // create a new p element
-// const author = document.createElement('p');
-// // set the text of the p to the book's author
-// author.textContent = book.author;
-// // append the p to the div
-// bookDiv.appendChild(author);
-// // create a new p element
-// const date = document.createElement('p');
-// // set the text of the p to the book's published date
-// date.textContent = book.publishedDate;
-// // append the p to the div
-// bookDiv.appendChild(date);
-// // create a new p element
-// const description = document.createElement('p');
-// // set the text
-
-
-
 
 function showLoader() {
     document.getElementById("loader").style.display = 'block'
