@@ -21,13 +21,17 @@ li {
 html {
   font-size: 1em;
   font-weight: normal;
+  line-height: 26px;
 }
 /* fonts */
 @font-face {
   font-family: "Playpen Sans", cursive;
-  src: url("Assests/fonts/PlaypenSans-VariableFont_wght.ttf");
+  src: url("assests/fonts/PlaypenSans-VariableFont_wght.ttf");
   font-family: "Inconsolata", monospace;
-  src: url("Assests/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+  src: url("assests/fonts/Inconsolata-VariableFont_wdth,wght.ttf");
+
+  src: url("assests/fonts/Lato-Regular.ttf");
+  font-family: "Lato", sans-serif;
 }
 
 /* base styles */
@@ -43,15 +47,15 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: right;
+  /* align-items: center; */
 }
 input {
   width: 100%;
   display: block;
   padding: 0 5px;
   outline: 0;
-  /* font-weight: bold; */
   font-size: 16px;
+  font-family: "Lato", sans-serif;
 }
 button {
   font-family: "Playen Sans", cursive;
@@ -71,19 +75,26 @@ button:hover {
 #result {
   font-family: "Inconsolata", monospace;
   margin: 2em auto;
-  max-width: 1060px;
-  /* background-color: #eee; */
+  max-width: 1200px;
 }
+.no-result {
+  position: absolute;
+  text-align: center;
+  font-size: 13px;
+  top: 20%;
+  right: 0;
+  left: 0;
+}
+  
 .card {
   border: 1px solid #1e1919;
   color: #1e1919;
-  padding-left: 2em;
+  padding: 0.5em 2em;
   background-color: #fcf9f9d6;
   border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 90%;
-
+  font-family: "Lato", sans-serif;
 }
 .card > * {
   line-height: 20px;
@@ -96,14 +107,10 @@ button:hover {
 .card img {
   max-width: 100%;
 }
-.no-result {
-  /* text-align: center; */
-  /* margin-top: 0.5rem; */
-  background-color: yellow;
-  margin: 0 auto;
-  display: visible;
-}
 
+footer{
+  /* margin-top: 2rem; */
+}
 footer h4,
 h1 {
   text-align: center;

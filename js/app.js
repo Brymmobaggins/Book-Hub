@@ -43,16 +43,15 @@ function displayResult(data) {
         }
     } else {
         // if there are no results, display a message
-        resultContainer.innerText = "No result found"
-        // const noResultDiv = document.createElement('div')
-        // noResultDiv.setAttribute('class', 'no-result')
-        // noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
-        // resultContainer.appendChild(noResultDiv)
-        // resultContainer.insertBefore(noResultDiv, result)
+        // resultContainer.innerHTML = `<p>No result found</p>`
+        const noResultDiv = document.createElement('div')
+        noResultDiv.setAttribute('class', 'no-result')
+        noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
+        resultContainer.appendChild(noResultDiv)
 
 
         // message vanish in 3 seconds
-        // setTimeout(() => { noResultDiv.remove() }, 3000)
+        setTimeout(() => { noResultDiv.remove() }, 3000)
 
     }
 
