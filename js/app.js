@@ -21,7 +21,6 @@ function displayResult(data) {
 
 
     if (data.items) {
-
         showLoader()
 
         setTimeout(() => {
@@ -42,16 +41,18 @@ function displayResult(data) {
                 const bookDiv = document.createElement('div');
                 bookDiv.setAttribute('class', 'card')
                 bookDiv.innerHTML = `
-                <p><b>Title:</b> ${title}</p>
-                <p><b>Authors:</b> ${authors}</p>
-                <p><b>Date Published:</b> ${publishedDate}</p>
-                <img src="${thumbnail}" alt="Book Cover">
-                <a href="${previewLink}" target="_blank">More info</a>
-                `;
+                    <p><b>Title:</b> ${title}</p>
+                    <p><b>Authors:</b> ${authors}</p>
+                    <p><b>Date Published:</b> ${publishedDate}</p>
+                    <img src="${thumbnail}" alt="Book Cover">
+                    <a href="${previewLink}" target="_blank">More info</a>
+                    `;
                 resultContainer.appendChild(bookDiv);
-                setTimeout(() => { showLoader() }, 3000);
+
             }
+
         }, 1000);
+
     } else {
         hideLoader()
 
@@ -67,6 +68,7 @@ function displayResult(data) {
     }
 
 }
+// hideLoader()
 
 //  function to show loader
 function showLoader() {
@@ -78,6 +80,5 @@ function hideLoader() {
     document.getElementById("loader").style.display = 'none'
 }
 
-// 
 // event listener to call the searchBooks function when user submits form
 button.addEventListener('click', searchBooks)
