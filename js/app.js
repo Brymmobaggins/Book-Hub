@@ -8,7 +8,8 @@ function searchBooks() {
     const searchInput = document.getElementById('search-input').value
 
     // make request from Google Book API
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}&key=${API_KEY}`).then(response => response.json())
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchInput}&key=${API_KEY}`)
+        .then(response => response.json())
         .then(data => displayResult(data))
         .catch(error => console.error('Error:', error))
 
