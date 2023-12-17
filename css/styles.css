@@ -2,7 +2,7 @@
 
 /* variables */
 :root {
-  --primary-color: #00ffff;
+  --error: #f7a0a5;
   --secondary-color: #2f3c7e;
   --tertiary-color: #b9e74c;
   --quaternary-color: #daefef;
@@ -46,7 +46,6 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
 }
 input {
   width: 100%;
@@ -78,7 +77,7 @@ button:hover {
   position: absolute;
   text-align: center;
   font-size: 13px;
-  color: #f7a0a5;
+  color: var(--error);
   top: 20%;
   right: 0;
   left: 0;
