@@ -119,8 +119,8 @@ footer a {
   border: 12px solid #f3f3f3; /* Light grey */
   border-top: 15px solid #000000; /* Blue */
   border-radius: 55%;
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   animation: spin 1s linear infinite;
   margin: 0 auto;
   display: none;
@@ -134,8 +134,6 @@ footer a {
     transform: rotate(360deg);
   }
 }
-
-/* mobile styles */
 
 /* small tablets styles */
 @media screen and (min-width: 600px) {
