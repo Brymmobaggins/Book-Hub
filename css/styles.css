@@ -121,7 +121,7 @@ footer a {
   border-radius: 55%;
   width: 90px;
   height: 90px;
-  animation: spin 1s linear infinite;
+  animation: spin 0.5s linear infinite;
   margin: 0 auto;
   display: none;
 }
