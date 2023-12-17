@@ -3,7 +3,7 @@
 /* variables */
 :root {
   --primary-color: #00ffff;
-  --secondary-color: #2F3C7E;
+  --secondary-color: #2f3c7e;
   --tertiary-color: #b9e74c;
   --quaternary-color: #daefef;
 }
@@ -15,7 +15,6 @@ ul,
 li {
   padding: 0;
   margin: 0;
-  /* text-decoration: none; */
   list-style-type: none;
 }
 html {
@@ -58,14 +57,12 @@ input {
   font-family: "Lato", sans-serif;
 }
 button {
-  font-family: "Playen Sans", cursive;
-  font-weight: 900;
-  border: 2px solid #3504a778;
-  color: #0e0000;
-  background-color: #FBEAEB;
+  border: 2px solid #ffc0cb;
+  color: #000000;
+  background-color: #a7def1;
   padding: 6px 12px;
   border-radius: 4px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-left: 0.685rem;
 }
 button:hover {
@@ -81,11 +78,12 @@ button:hover {
   position: absolute;
   text-align: center;
   font-size: 13px;
+  color: #f7a0a5;
   top: 20%;
   right: 0;
   left: 0;
 }
-  
+
 .card {
   border: 1px solid #1e1919;
   color: #1e1919;
@@ -108,15 +106,13 @@ button:hover {
   max-width: 100%;
 }
 
-footer{
-  /* margin-top: 2rem; */
-}
 footer h4,
 h1 {
   text-align: center;
 }
 footer a {
   color: #abd059;
+  font-size: 13px;
 }
 /* loading spinner  animation*/
 #loader {

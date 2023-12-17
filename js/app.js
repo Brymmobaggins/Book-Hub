@@ -1,8 +1,6 @@
 
 const button = document.getElementById('search-button')
 
-// event listener to call the searchBooks function when user submits form
-button.addEventListener('click', searchBooks)
 
 // function to search books from Google Books API
 function searchBooks() {
@@ -21,33 +19,47 @@ function displayResult(data) {
     const resultContainer = document.getElementById('result')
     resultContainer.innerHTML = ''
 
-    if (data.items) {
-        for (let i = 0; i < data.items.length; i++) {
-            const book = data.items[i];
-            const title = book.volumeInfo.title;
 
-            const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : 'Unknown Authors';
-            const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ' ';
-            const publishedDate = book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : ' ';
-            const previewLink = book.volumeInfo.previewLink || '#'
-            const bookDiv = document.createElement('div');
-            bookDiv.setAttribute('class', 'card')
-            bookDiv.innerHTML = `
-                    <p><b>Title:</b> ${title}</p>
-                    <p><b>Authors:</b> ${authors}</p>
-                    <p><b>Date Published:</b> ${publishedDate}</p>
-                    <img src="${thumbnail}" alt="Book Cover">
-                    <a href="${previewLink}" target="_blank">More info</a>
-                    `;
-            resultContainer.appendChild(bookDiv);
-        }
+    if (data.items) {
+
+        showLoader()
+
+        setTimeout(() => {
+            hideLoader()
+
+            for (let i = 0; i < data.items.length; i++) {
+                const book = data.items[i];
+                const title = book.volumeInfo.title;
+
+                const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : 'Unknown Authors';
+
+                const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : ' ';
+
+                const publishedDate = book.volumeInfo.publishedDate ? book.volumeInfo.publishedDate : ' ';
+
+                const previewLink = book.volumeInfo.previewLink || '#'
+
+                const bookDiv = document.createElement('div');
+                bookDiv.setAttribute('class', 'card')
+                bookDiv.innerHTML = `
+                <p><b>Title:</b> ${title}</p>
+                <p><b>Authors:</b> ${authors}</p>
+                <p><b>Date Published:</b> ${publishedDate}</p>
+                <img src="${thumbnail}" alt="Book Cover">
+                <a href="${previewLink}" target="_blank">More info</a>
+                `;
+                resultContainer.appendChild(bookDiv);
+                setTimeout(() => { showLoader() }, 3000);
+            }
+        }, 1000);
     } else {
+        hideLoader()
+
         // if there are no results, display a message
         const noResultDiv = document.createElement('div')
         noResultDiv.setAttribute('class', 'no-result')
         noResultDiv.innerHTML = `<p>Enter Author, books or Subject ...</p>`
         resultContainer.appendChild(noResultDiv)
-
 
         // message vanish in 3 seconds
         setTimeout(() => { noResultDiv.remove() }, 3000)
@@ -56,9 +68,16 @@ function displayResult(data) {
 
 }
 
+//  function to show loader
 function showLoader() {
     document.getElementById("loader").style.display = 'block'
 }
+
+// function to hide loader
 function hideLoader() {
     document.getElementById("loader").style.display = 'none'
 }
+
+// 
+// event listener to call the searchBooks function when user submits form
+button.addEventListener('click', searchBooks)
