@@ -5,17 +5,25 @@
 ## [Live demo](https://boook-finder.netlify.app/)
 
 ## Built with
-- HTML 
-- CSS 
-- JavaScript
 
+- HTML
+- CSS
+- Vanilla JavaScript
 
-### concept
+### Concept
 
+- function
 - API request
-- fetch API
+- fetch method for API 
 - DOM manipulation
 - if else logic
+- tenary operator
+- loop methods ( for loop)
 
-## What i did 
+## What you should see
 
+You would see an input field and button. You are to enter the title, the book or the author before clicking the button. After entering your search query, a spinner would diplay for 1 second on the webpage before list of books would appear on the webpage.
+
+## lines of code
+
+This took me 85 lines of codes
