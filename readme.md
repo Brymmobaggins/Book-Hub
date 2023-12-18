@@ -1,6 +1,7 @@
 ## Book finder Application
 
-##![Project preview](/assests/img/Screenshot%202023-12-17%20at%202.43.45%20PM.png)
+## Preview
+![book finder](/assests/img/Screenshot%202023-12-17%20at%202.43.45%20PM.png)
 
 ## [Live demo](https://boook-finder.netlify.app/)
 
@@ -10,7 +11,7 @@
 - CSS
 - Vanilla JavaScript
 
-### Concept
+### Key Concept
 
 - function
 - API request
@@ -24,6 +25,6 @@
 
 You would see an input field and button. You are to enter the title, the book or the author before clicking the button. After entering your search query, a spinner would diplay for 1 second on the webpage before list of books would appear on the webpage.
 
-## lines of code
+## Lines of code
 
 This took me 85 lines of codes
