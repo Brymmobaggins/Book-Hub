@@ -1,7 +1,7 @@
 ## Book finder Application
 
 ## Preview
-![book finder](/assests/img/Screenshot%202023-12-17%20at%202.43.45%20PM.png)
+![Screenshot](/Screenshot%202023-12-17%20at%202.43.45%20PM.png)
 
 ## [Live demo](https://boook-finder.netlify.app/)
 
