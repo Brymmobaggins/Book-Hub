@@ -46,7 +46,7 @@ function displayResult(data) {
                     <p><b>Authors:</b> ${authors}</p>
                     <p><b>Date Published:</b> ${publishedDate}</p>
                     <img src="${thumbnail}" alt="Book Cover">
-                    <a href="${previewLink}" target="_blank">More info</a>
+                    <a href="${previewLink}" target="_blank">More info about the book</a>
                     `;
                 resultContainer.appendChild(bookDiv);
 
@@ -69,7 +69,7 @@ function displayResult(data) {
     }
 
 }
-// hideLoader()
+
 
 //  function to show loader
 function showLoader() {
